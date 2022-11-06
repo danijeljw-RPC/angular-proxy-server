@@ -1,10 +1,10 @@
-name: Docker Image CI b8c790d3
+name: Docker Image CI 5075db8
 
 on:
   push:
-    branches: [ "b8c790d3" ]
+    branches: [ "5075db8" ]
   pull_request:
-    branches: [ "b8c790d3" ]
+    branches: [ "5075db8" ]
 
 jobs:
 
