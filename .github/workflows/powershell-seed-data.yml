@@ -1,0 +1,21 @@
+name: PowerShell Seed Data
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Seed Data
+        shell: pwsh
+        run: ./other/replace-data.ps1
+
