@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build:
+  seed-data:
 
     runs-on: ubuntu-latest
 
