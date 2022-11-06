@@ -42,31 +42,32 @@ export class AppComponent implements OnInit {
   addItems() {
     return this.http
       .post<any>('/api/OrderManagement', {
-        id: this.id + Math.floor(Math.random() * 100),
-        uuid:
-          '3fa85f64-5717-4562-b3fc-2c963f66a6' +
-          Math.floor(Math.random() * 100),
+        // id: this.id + Math.floor(Math.random() * 100),
+        // // uuid:
+        // //   '3fa85f64-5717-4562-b3fc-2c963f66a6' +
+        // //   Math.floor(Math.random() * 100),
+        // uuid: '3fa85f64-5717-4562-b3fc-2c963f66a6',
         accountId: 1,
         orderDate: 'fish',
         orderStatus: 'fish',
         orderName: 'fish',
         downloadLink: 'fish',
         imageOutputFormat: 'fish',
-        notificationEmailAddress: 'fish',
-        continuousIntegration: true,
-        continuousDelivery: true,
-        release: 'fish',
-        edition: 'fish',
-        version: 'fish',
-        arch: 'fish',
-        lcid: 'fish',
-        optionalFeaturestring: 'fish',
-        appxPackagesstring: 'fish',
-        windowsDefaultAccount: 'fish',
-        windowsDefaultPassword: 'fish',
-        customRegistryKeys: ['string'],
-        applicationUID: ['string'],
-        driversUID: ['string'],
+        // notificationEmailAddress: 'fish',
+        // continuousIntegration: true,
+        // continuousDelivery: true,
+        // release: 'fish',
+        // edition: 'fish',
+        // version: 'fish',
+        // arch: 'fish',
+        // lcid: 'fish',
+        // optionalFeaturestring: 'fish',
+        // appxPackagesstring: 'fish',
+        // windowsDefaultAccount: 'fish',
+        // windowsDefaultPassword: 'fish',
+        // customRegistryKeys: ['string'],
+        // applicationUID: ['string'],
+        // driversUID: ['string'],
       })
       .subscribe((data) => {
         console.log(data);

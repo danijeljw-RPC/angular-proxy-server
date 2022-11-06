@@ -1,15 +1,9 @@
 # syntax=docker/dockerfile:1.4
 
-## PART 01 - BUILD APP
-FROM node:17.0.1-bullseye-slim AS build
-WORKDIR /project
-RUN npm install -g @angular/cli
-COPY ./angular/package.json ./angular/package-lock.json ./
+FROM node:19-alpine3.15
+WORKDIR /app
+COPY ./cors-app/package.json ./cors-app/package-lock.json ./
 RUN npm install
-COPY ./angular/ .
-RUN echo -e "N" | ng build
-
-## PART 02 - SERVE APP IN NGINX
-FROM nginx:1.23.2-alpine
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /project/dist/cors-issues /usr/share/nginx/html
+RUN npm install -g @cors-app/cli
+COPY ./cors-app/ .
+# CMD ng serve --proxy-config proxy.conf.json --host 0.0.0.0 --port 4200 --disable-host-check
